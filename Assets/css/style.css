@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.circle1{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: linear-gradient( to right bottom, rgba(164, 255, 169, 0.8) , rgba(0, 255, 42, 0.3) );
+}
+
+
+.circle2{
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: linear-gradient( to right bottom, rgba(164, 173, 255, 0.3) , rgba(25, 0, 255, 0.9) );
+}
+
+.circle3{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient( to right bottom, rgba(255, 164, 247, 0.3) , rgba(255, 0, 234, 0.9) );
+}
+
+#preLoader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+}
+
+.preloader{
+    animation-name: preLoader;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes preLoader{
+    0%{
+        opacity: 1;
+        z-index: 100000000;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+#logoDiv{
+    margin: 43.5vh 37.5%;
+    width: 25%;
+    height: 15vh;
+    color: #fff;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    
+#logoDiv{
+    margin: 43.5vh 25%;
+    width: 50%;
+    height: 15vh;
+    color: #fff;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 4vw;
+    text-align: center;
+}
+#logoDiv h1{
+    display: inline-block;
+    margin-bottom: 10%;
+}
+}
+
+#logoDiv h1{
+    display: inline-block;
+}
+
+.line{
+    position: relative;
+    background-color: rgb(70, 70, 70);
+    width: 100%;
+    height: 0.2vh;
+    border-radius: 10px;
+}
+
+#loaderLine{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    animation-name: loaderLine;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loaderLine{
+    0%{
+        left: 0;
+        width: 0%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        right: 0;
+        width: 0%;
+    }
+}
+
+.letterDot{
+    opacity: 1;
+    animation-name: dot;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dot{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#logo{
+    position: fixed;
+    top: 3%;
+    left: 0;
+    color: #fff;
+    font-family: 'Paytone One', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+#logo h1{
+    font-size: 2vw;
+}
+
+main{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#glass{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    background: linear-gradient(
+      to right bottom,
+      rgba(100, 211, 255, 0.5),
+      rgba(118, 68, 255, 0.3)
+    );
+    z-index: 2;
+    backdrop-filter: blur(0.5rem);
+}
+
+#chatDiv{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: auto;
+}
+
+.chatDiv{
+    width: 100%;
+    height: 10%;
+    margin-top: 3%;
+    position: relative;
+}
+
+.firstChat{
+    position: absolute;
+    left: 5%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2vw;
+    opacity: 1;
+}
+
+.left{
+    position: absolute;
+    left: 5%;
+    margin-right: 40%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.right{
+    position: absolute;
+    right: 5%;
+    padding: 1%;
+    margin-left: 40%;
+    border-radius: 10px;
+    background-color: rgb(66, 105, 56);
+    color: #fff;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+#textAreaDiv{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#textArea{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(59, 59, 59);
+    color: #fff;
+    overflow: hidden;
+}
+
+#sendButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 9.5%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: rgb(66, 105, 56);
+    overflow: hidden;
+    font-size: 5vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#sendbtn{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2vw;
+    color: #fff;
+}
+
+#chatTextArea{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 1% 1% 1% 2%;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.left a{
+    color: #086bff;
+    text-decoration: none;
+}
+
+.left a:hover{
+    text-decoration: underline;
+}

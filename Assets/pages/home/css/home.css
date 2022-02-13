@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#preLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+}
+
+.preloader {
+  animation-name: preLoader;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes preLoader {
+  0% {
+    opacity: 1;
+    z-index: 100000000;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+#logoDiv {
+  margin: 43.5vh 37.5%;
+  width: 25%;
+  height: 15vh;
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#logoDiv h1 {
+  display: inline-block;
+}
+
+.line {
+  position: relative;
+  background-color: rgb(70, 70, 70);
+  width: 100%;
+  height: 0.2vh;
+  border-radius: 10px;
+}
+
+#loaderLine {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  animation-name: loaderLine;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loaderLine {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    right: 0;
+    width: 0%;
+  }
+}
+
+.letterDot {
+  opacity: 1;
+  animation-name: dot;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#header {
+    position: fixed;
+    top: 0;
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+  background-color: #ffffff1a;
+}
+
+#header h1{
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-family: "Paytone One", sans-serif;
+    padding: 1% 3%;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+.currentPage{
+    text-decoration: underline;
+}
+
+#header h1:hover{
+    text-decoration: underline;
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 2% 0%;
+}
+
+#footer h1{
+    display: inline-block;
+    padding: 0% 3%;
+    font-size: 1vw;
+    font-family: "Paytone One", sans-serif;
+    cursor: pointer;
+}
+
+#footer h1 a{
+    color: #fff;
+}
+
+#logo {
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+#logo h1{
+    font-size: 2vw;
+    text-decoration: none;
+}
+
+#logo h1:hover{
+    text-decoration: none;
+}
+
