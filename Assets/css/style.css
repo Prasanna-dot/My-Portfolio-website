@@ -226,7 +226,6 @@ main {
   position: relative;
   width: 70%;
   height: 100vh;
-  padding: 1%;
   transition: all 1s;
 }
 
@@ -253,11 +252,6 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  .introBefore {
-    position: relative;
-    width: 70%;
-    height: 50vh;
-  }
 
   #startButton {
     font-family: 'Montserrat', sans-serif;
@@ -312,11 +306,16 @@ main {
     transition: all 1s;
   }
 
+  .introBefore {
+    position: relative;
+    width: 70%;
+    height: 50vh;
+  }
+
   .introAfter {
     position: relative;
     width: 100%;
     height: 100vh;
-    padding: 1%;
     transition: all 1s;
   }
 }
