@@ -140,7 +140,9 @@ function chatting() {
     create = `<div class="chatDiv"><div class="left">&#128522;&#128522;&#128522;</div></div>`;
     right = right + create;
 
-    window.location.href="./../../Assets/pages/home/html/home.html"
+    setTimeout(function(){
+      window.location.href="./../../Assets/pages/home/html/home.html";
+  }, 2000);
   }
 
   document.getElementById("chatDiv").innerHTML = right;

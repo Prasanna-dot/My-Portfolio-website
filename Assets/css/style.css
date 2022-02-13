@@ -59,7 +59,13 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #161616;
+  background: linear-gradient(
+    to right bottom,
+    rgba(49, 49, 49, 0.5),
+    rgba(0, 0, 0, 0.3)
+  );
+  z-index: 2;
+  backdrop-filter: blur(0.5rem);
 }
 
 .preloader {
@@ -89,7 +95,7 @@ body {
   width: 25%;
   height: 15vh;
   color: #fff;
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2.5vw;
   text-align: center;
 }
@@ -100,7 +106,7 @@ body {
     width: 50%;
     height: 15vh;
     color: #fff;
-    font-family: "Paytone One", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 4vw;
     text-align: center;
   }
@@ -175,7 +181,7 @@ body {
   top: 3%;
   left: 0;
   color: #fff;
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   text-align: center;
   width: 100%;
@@ -225,7 +231,7 @@ main {
 }
 
 #startButton {
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding: 1% 6%;
   margin: 2% 0%;
   border: none;
@@ -254,7 +260,7 @@ main {
   }
 
   #startButton {
-    font-family: "Paytone One", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 5% 30%;
     margin: 7% 0%;
     border: none;
@@ -275,18 +281,35 @@ main {
     margin-right: auto;
   }
 
-  #profile {
-    width: 5rem;
-    height: 5rem;
+
+  .profileBefore {
+    width: 10rem;
+    height: 10rem;
     background-color: #afd4ff;
     border-radius: 50%;
-    border: 4px solid #a1a1a1;
+    border: 4px solid rgba(26, 3, 88, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .profileAfter {
+      margin-top: 4%;
+    width: 2rem;
+    height: 2rem;
+    background-color: #afd4ff;
+    border-radius: 50%;
+    border: 4px solid rgba(26, 3, 88, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 1s;
   }
 
   .introAfter {
@@ -361,7 +384,7 @@ main {
 }
 
 #actionButton {
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 4.1rem;
   height: 4.1rem;
   border: none;
@@ -391,7 +414,7 @@ main {
   border-radius: 20rem;
   padding: 0% 5%;
   font-size: 2vw;
-  font-family: "Paytone One", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 
@@ -407,7 +430,7 @@ main {
 
 .chatDivAfter {
   width: 80%;
-  height: 73vh;
+  height: auto;
   overflow: auto;
   padding: 0% 3%;
   display: block;
@@ -426,6 +449,10 @@ main {
   height: 10vh;
 }
 
+.chatDiv:nth-child(5){
+    height: 15vh;
+}
+
 .left {
   position: absolute;
   top: 0;
@@ -434,8 +461,8 @@ main {
   border-radius: 1rem;
   background-color: #ffffff;
   text-transform: uppercase;
-  font-size: 2vw;
-  font-family: "Paytone One", sans-serif;
+  font-size: 1.5vw;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .right {
@@ -451,8 +478,8 @@ main {
   z-index: 2;
   backdrop-filter: blur(0.5rem);
   text-transform: uppercase;
-  font-size: 2vw;
-  font-family: "Paytone One", sans-serif;
+  font-size: 1.5vw;
+  font-family: 'Montserrat', sans-serif;
   padding: 1% 2%;
   color: #fff;
 }
@@ -467,9 +494,9 @@ main {
   .afterform {
     position: absolute;
     left: 4.5%;
-    bottom: 2%;
+    bottom: 4%;
     width: 90%;
-    height: 9vh;
+    height: 3.1rem;
     opacity: 1;
     transition: all 1s;
   }
@@ -486,7 +513,7 @@ main {
   }
 
   #actionButton {
-    font-family: "Paytone One", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     width: 3.1rem;
     height: 3.1rem;
     border: none;
@@ -516,7 +543,38 @@ main {
     border-radius: 20rem;
     padding: 0% 5%;
     font-size: 2vw;
-    font-family: "Paytone One", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+  }
+
+  .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1% 2%;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    font-size: 6vw;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 1rem;
+    background: linear-gradient(
+      to right bottom,
+      rgba(122, 217, 255, 0.5),
+      rgba(26, 3, 88, 0.3)
+    );
+    z-index: 2;
+    backdrop-filter: blur(0.5rem);
+    text-transform: uppercase;
+    font-size: 6vw;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1% 2%;
+    color: #fff;
   }
 }
