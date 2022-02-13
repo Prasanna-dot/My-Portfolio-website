@@ -195,6 +195,89 @@ main{
     );
     z-index: 2;
     backdrop-filter: blur(0.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro{
+    width: 70%;
+    height: 50vh;
+}
+
+#intro button{
+    font-family: 'Paytone One', sans-serif;
+    padding: 1% 6%;
+    margin: 2% 0%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    background: linear-gradient(
+      to right bottom,
+      rgba(122, 217, 255, 0.5),
+      rgba(26, 3, 88, 0.3)
+    );
+    z-index: 2;
+    backdrop-filter: blur(0.5rem);
+    font-size: 1.5vw;
+    color: #fff;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  
+#intro button{
+    font-family: 'Paytone One', sans-serif;
+    padding: 5% 30%;
+    margin: 7% 0%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2rem;
+    background: linear-gradient(
+      to right bottom,
+      rgba(122, 217, 255, 0.5),
+      rgba(26, 3, 88, 0.3)
+    );
+    z-index: 2;
+    backdrop-filter: blur(0.5rem);
+    font-size: 3vw;
+    color: #fff;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}  
+
+#profile{
+    width: 5rem;
+    height: 5rem;
+    background-color: #afd4ff;
+    border-radius: 50%;
+    border: 4px solid #a1a1a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+#profile{
+    width: 15rem;
+    height: 15rem;
+    background-color: #afd4ff;
+    border-radius: 50%;
+    border: 4px solid #a1a1a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #chatDiv{
