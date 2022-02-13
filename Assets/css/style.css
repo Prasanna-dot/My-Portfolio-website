@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(177, 189, 253);
+  background-color: rgb(16, 15, 128);
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -95,7 +95,7 @@ body {
   width: 25%;
   height: 15vh;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.5vw;
   text-align: center;
 }
@@ -106,7 +106,7 @@ body {
     width: 50%;
     height: 15vh;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 4vw;
     text-align: center;
   }
@@ -181,7 +181,7 @@ body {
   top: 3%;
   left: 0;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   cursor: pointer;
   text-align: center;
   width: 100%;
@@ -230,7 +230,7 @@ main {
 }
 
 #startButton {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 1% 6%;
   margin: 2% 0%;
   border: none;
@@ -252,9 +252,8 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-
   #startButton {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 5% 30%;
     margin: 7% 0%;
     border: none;
@@ -275,7 +274,6 @@ main {
     margin-right: auto;
   }
 
-
   .profileBefore {
     width: 10rem;
     height: 10rem;
@@ -289,9 +287,9 @@ main {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .profileAfter {
-      margin-top: 4%;
+    margin-top: 4%;
     width: 2rem;
     height: 2rem;
     background-color: #afd4ff;
@@ -335,6 +333,7 @@ main {
 }
 
 .profileAfter {
+  margin-top: 2%;
   width: 5rem;
   height: 5rem;
   background-color: #afd4ff;
@@ -383,20 +382,20 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-    #chatform div:nth-child(2) {
-      position: absolute;
-      right: 5%;
-    }
-    
-    #chatform div:nth-child(1) {
-      position: absolute;
-      left: 5%;
-      width: 83%;
-    }  
+  #chatform div:nth-child(2) {
+    position: absolute;
+    right: 5%;
+  }
+
+  #chatform div:nth-child(1) {
+    position: absolute;
+    left: 5%;
+    width: 83%;
+  }
 }
 
 #actionButton {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 4.1rem;
   height: 4.1rem;
   border: none;
@@ -426,7 +425,7 @@ main {
   border-radius: 20rem;
   padding: 0% 5%;
   font-size: 2vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
 
@@ -461,8 +460,8 @@ main {
   height: 10vh;
 }
 
-.chatDiv:nth-child(5){
-    height: 15vh;
+.chatDiv:nth-child(5) {
+  height: 15vh;
 }
 
 .left {
@@ -474,7 +473,7 @@ main {
   background-color: #ffffff;
   text-transform: uppercase;
   font-size: 1.5vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .right {
@@ -491,7 +490,7 @@ main {
   backdrop-filter: blur(0.5rem);
   text-transform: uppercase;
   font-size: 1.5vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 1% 2%;
   color: #fff;
 }
@@ -501,8 +500,6 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-    
-
   .afterform {
     position: absolute;
     left: 4.5%;
@@ -524,7 +521,7 @@ main {
   }
 
   #actionButton {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 3.1rem;
     height: 3.1rem;
     border: none;
@@ -554,7 +551,7 @@ main {
     border-radius: 20rem;
     padding: 0% 5%;
     font-size: 4.5vw;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
   }
 
@@ -567,9 +564,9 @@ main {
     background-color: #ffffff;
     text-transform: uppercase;
     font-size: 6vw;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
-  
+
   .right {
     position: absolute;
     top: 0;
@@ -584,7 +581,7 @@ main {
     backdrop-filter: blur(0.5rem);
     text-transform: uppercase;
     font-size: 6vw;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 1% 2%;
     color: #fff;
   }

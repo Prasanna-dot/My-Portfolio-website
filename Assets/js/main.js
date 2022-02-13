@@ -142,7 +142,7 @@ function chatting() {
 
     setTimeout(function(){
       window.location.href="./../../Assets/pages/home/html/home.html";
-  }, 2000);
+  }, 1000);
   }
 
   document.getElementById("chatDiv").innerHTML = right;
