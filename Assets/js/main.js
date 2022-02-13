@@ -70,7 +70,7 @@ function buttonChange() {
 </svg>`;
 
   let myForm = document.getElementById("chatform");
-  myForm.setAttribute("onsubmit", "prasanna()");
+  myForm.setAttribute("onsubmit", "chatsubmmit()");
 
   let check = document.getElementById("textArea").value;
   if (check == "") {
@@ -78,18 +78,73 @@ function buttonChange() {
       "actionButton"
     ).innerHTML = `<svg style="fill: rgb(255, 255, 255); width:40%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M192 352c53.03 0 96-42.97 96-96v-160c0-53.03-42.97-96-96-96s-96 42.97-96 96v160C96 309 138.1 352 192 352zM344 192C330.7 192 320 202.7 320 215.1V256c0 73.33-61.97 132.4-136.3 127.7c-66.08-4.169-119.7-66.59-119.7-132.8L64 215.1C64 202.7 53.25 192 40 192S16 202.7 16 215.1v32.15c0 89.66 63.97 169.6 152 181.7V464H128c-18.19 0-32.84 15.18-31.96 33.57C96.43 505.8 103.8 512 112 512h160c8.222 0 15.57-6.216 15.96-14.43C288.8 479.2 274.2 464 256 464h-40v-33.77C301.7 418.5 368 344.9 368 256V215.1C368 202.7 357.3 192 344 192z" /></svg>`;
 
-    myForm.setAttribute("onsubmit", "sam()");
+    myForm.setAttribute("onsubmit", "chatsubmmit()");
   }
 }
 
-function prasanna() {
+let chatreply = [];
+localStorage.setItem("reply", JSON.stringify(chatreply));
+
+function chatsubmmit() {
   event.preventDefault();
-  console.log("Prasanna");
+  let textArea = document.getElementById("textArea").value;
+  document.getElementById("textArea").value = "";
+
+  let storeValue = JSON.parse(localStorage.getItem("reply"));
+
+  let len = storeValue.length;
+
+  if (len == 0 && textArea != "") {
+    chatreply.push(textArea);
+  } else if (storeValue[len - 1] != textArea && textArea != "") {
+    chatreply.push(textArea);
+  } else {
+    alert("Please chat With PV");
+  }
+
+  localStorage.setItem("reply", JSON.stringify(chatreply));
+  chatting();
 }
 
-function sam() {
-  event.preventDefault();
-  console.log("sam");
+function chatting() {
+  let storeValues = JSON.parse(localStorage.getItem("reply"));
+
+  let right = "";
+  let create = "";
+
+  create = `<div class="chatDiv"><div class="left">Hi!</div></div>`;
+  right = right + create;
+
+  if (storeValues[0] == "hi") {
+    create = `<div class="chatDiv"><div class="right">${storeValues[0]}</div></div>`;
+    document.getElementById("textArea").placeholder = "Your name";
+    right = right + create;
+
+    create = `<div class="chatDiv"><div class="left">I am Prasanna venkatesh</div></div>`;
+    right = right + create;
+  }
+
+  if (storeValues.length >= 2) {
+    create = `<div class="chatDiv"><div class="right">My name is ${storeValues[1]}</div></div>`;
+    document.getElementById("textArea").placeholder = "Thank you";
+    right = right + create;
+
+    create = `<div class="chatDiv"><div class="left">Welcome ${storeValues[1]} <a href="./../../Assets/pages/home/html/home.html">click here</a> to see my portfolio thank you</div></div>`;
+    right = right + create;
+  }
+
+  if(storeValues[2] == "thank you"){
+    create = `<div class="chatDiv"><div class="right">${storeValues[2]}</div></div>`;
+    right = right + create;
+
+    create = `<div class="chatDiv"><div class="left">&#128522;&#128522;&#128522;</div></div>`;
+    right = right + create;
+
+    window.location.href="./../../Assets/pages/home/html/home.html"
+  }
+
+  document.getElementById("chatDiv").innerHTML = right;
 }
 
 buttonChange();
+chatting();
