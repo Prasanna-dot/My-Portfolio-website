@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(32, 42, 185);
+  background-color: rgb(187, 191, 255);
   width: 100%;
   height: 100vh;
 }
@@ -25,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-  
+
 .preloader {
   animation-name: preLoader;
   animation-duration: 2s;
@@ -46,7 +46,7 @@ body {
   }
 }
 
-#logoDiv {
+#loader {
   width: 25%;
   height: 15%;
   color: #fff;
@@ -55,7 +55,7 @@ body {
   text-align: center;
 }
 
-.letterDot {
+.dot {
   opacity: 1;
   animation-name: dot;
   animation-duration: 1s;
@@ -77,7 +77,7 @@ body {
   }
 }
 
-.line {
+.loaderLine {
   position: relative;
   background-color: rgb(70, 70, 70);
   width: 100%;
@@ -85,7 +85,7 @@ body {
   border-radius: 10px;
 }
 
-#loaderLine {
+#lineFill {
   position: absolute;
   background-color: rgb(255, 255, 255);
   height: 100%;
@@ -112,8 +112,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-
-  #logoDiv {
+  #loader {
     margin: 43.5vh 25%;
     width: 50%;
     height: 15vh;
@@ -122,8 +121,74 @@ body {
     font-size: 5vw;
     text-align: center;
   }
-  #logoDiv h1 {
+  #loader h1 {
     margin-bottom: 10%;
   }
+}
 
+.circle1 {
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 196, 70, 0.8),
+    rgba(255, 208, 0, 0.3)
+  );
+}
+
+.circle2 {
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(164, 173, 255, 0.3),
+    rgba(7, 0, 66, 0.9)
+  );
+}
+
+.circle3 {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 164, 247, 0.3),
+    rgba(255, 0, 234, 0.9)
+  );
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#glassEffect {
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(187, 162, 255, 0.3)
+  );
+  z-index: 2;
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
