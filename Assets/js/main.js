@@ -1,8 +1,10 @@
-const loader = document.getElementById("preLoader");
-const chat = document.getElementById("firstChat");
-window.addEventListener("load", function () {
-  loader.classList.add("preloader");
-});
+// const loader = document.getElementById("preLoader");
+// window.addEventListener("load", function () {
+//   loader.classList.add("preloader");
+//   setTimeout(function () {
+//     loader.style.display = "none";
+//   }, 2500);
+// });
 
 let myPanel = document.getElementById("profile");
 let subpanel = document.getElementById("profileImg");
@@ -133,16 +135,16 @@ function chatting() {
     right = right + create;
   }
 
-  if(storeValues[2] == "thank you"){
+  if (storeValues[2] == "thank you") {
     create = `<div class="chatDiv"><div class="right">${storeValues[2]}</div></div>`;
     right = right + create;
 
     create = `<div class="chatDiv"><div class="left">&#128522;&#128522;&#128522;</div></div>`;
     right = right + create;
 
-    setTimeout(function(){
-      window.location.href="./../../pages/home/html/home.html";
-  }, 1000);
+    setTimeout(function () {
+      window.location.href = "./../../pages/home/html/home.html";
+    }, 1000);
   }
 
   document.getElementById("chatDiv").innerHTML = right;
