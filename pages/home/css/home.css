@@ -6,66 +6,24 @@
 
 body {
   background-color: rgb(16, 15, 128);
-  height: 100vh;
   width: 100%;
-  overflow: hidden;
-}
-
-.circle1 {
-  position: absolute;
-  top: 2%;
-  left: 1%;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 174, 0, 0.8),
-    rgba(255, 226, 96, 0.3)
-  );
-}
-
-.circle2 {
-  position: absolute;
-  bottom: 2%;
-  right: 1%;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  background: linear-gradient(
-    to right bottom,
-    rgba(164, 173, 255, 0.3),
-    rgba(25, 0, 255, 0.9)
-  );
-}
-
-.circle3 {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 164, 247, 0.3),
-    rgba(255, 0, 234, 0.9)
-  );
+  height: 100vh;
 }
 
 #preLoader {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
     to right bottom,
     rgba(49, 49, 49, 0.5),
     rgba(0, 0, 0, 0.3)
   );
-  z-index: 2;
+  z-index: 200;
   backdrop-filter: blur(0.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .preloader {
@@ -79,19 +37,16 @@ body {
 @keyframes preLoader {
   0% {
     opacity: 1;
-    z-index: 100000000;
   }
   90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    z-index: 0;
   }
 }
 
-#logoDiv {
-  margin: 43.5vh 37.5%;
+#loader {
   width: 25%;
   height: 15vh;
   color: #fff;
@@ -100,27 +55,29 @@ body {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  #logoDiv {
-    margin: 43.5vh 25%;
-    width: 50%;
-    height: 15vh;
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    font-size: 4vw;
-    text-align: center;
+.dot {
+  opacity: 1;
+  animation-name: dot;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot {
+  0% {
+    opacity: 1;
   }
-  #logoDiv h1 {
-    display: inline-block;
-    margin-bottom: 10%;
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-#logoDiv h1 {
-  display: inline-block;
-}
-
-.line {
+.loaderLine {
   position: relative;
   background-color: rgb(70, 70, 70);
   width: 100%;
@@ -128,7 +85,7 @@ body {
   border-radius: 10px;
 }
 
-#loaderLine {
+#lineFill {
   position: absolute;
   background-color: rgb(255, 255, 255);
   height: 100%;
@@ -154,56 +111,87 @@ body {
   }
 }
 
-.letterDot {
-  opacity: 1;
-  animation-name: dot;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-delay: 0ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+.circle1 {
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  width: 17rem;
+  height: 17rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(70, 255, 86, 0.8),
+    rgba(76, 0, 255, 0.3)
+  );
 }
 
-@keyframes dot {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.circle2 {
+  position: absolute;
+  bottom: 2%;
+  right: 1%;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(164, 173, 255, 0.3),
+    rgba(7, 0, 66, 0.9)
+  );
 }
 
-#logo {
-  position: fixed;
-  top: 3%;
-  left: 0;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
+.circle3 {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 164, 247, 0.3),
+    rgba(255, 0, 234, 0.9)
+  );
 }
 
-#logo h1 {
-  font-size: 2vw;
+.circle4 {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(4, 95, 60, 0.3),
+    rgba(61, 255, 103, 0.9)
+  );
+}
+
+.circle5 {
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(194, 255, 158, 0.3),
+    rgba(35, 175, 0, 0.9)
+  );
 }
 
 main {
-  position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#glass {
+#glassEffect {
   width: 100%;
-  height: 100vh;
-  background: white;
+  height: 100%;
   background: linear-gradient(
     to right bottom,
     rgba(100, 211, 255, 0.4),
@@ -216,7 +204,8 @@ main {
   align-items: center;
 }
 
-#glass h1 {
+
+#glassEffect h1 {
   width: 70%;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -225,7 +214,7 @@ main {
   line-height: 150%;
 }
 
-#glass h1 span {
+#glassEffect h1 span {
   color: rgb(255, 255, 255);
   cursor: pointer;
   background: linear-gradient(
@@ -239,7 +228,7 @@ main {
   padding: 0.5% 1%;
 }
 
-#glass h1 span:hover {
+#glassEffect h1 span:hover {
   text-decoration: underline;
 }
 

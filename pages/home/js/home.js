@@ -1,7 +1,10 @@
+// Preloader function
 const loader = document.getElementById("preLoader");
-const chat = document.getElementById("firstChat");
 window.addEventListener("load", function () {
   loader.classList.add("preloader");
+  setTimeout(function () {
+    loader.style.display = "none";
+  }, 2500);
 });
 
 let myPanel = document.getElementById("profile");
