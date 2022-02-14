@@ -188,7 +188,7 @@ main {
     rgba(187, 162, 255, 0.3)
   ); */
 
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   z-index: 2;
   backdrop-filter: blur(0.5rem);
   display: flex;
