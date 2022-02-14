@@ -194,7 +194,7 @@ body {
 main {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,7 +202,7 @@ main {
 
 #glass {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: white;
   background: linear-gradient(
     to right bottom,
@@ -219,13 +219,13 @@ main {
 .introBefore {
   position: relative;
   width: 70%;
-  height: 50vh;
+  height: 50%;
 }
 
 .introAfter {
   position: relative;
   width: 70%;
-  height: 100vh;
+  height: 100%;
   transition: all 1s;
 }
 
@@ -307,13 +307,13 @@ main {
   .introBefore {
     position: relative;
     width: 70%;
-    height: 50vh;
+    height: 50%;
   }
 
   .introAfter {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     transition: all 1s;
   }
 }
@@ -352,7 +352,7 @@ main {
   position: absolute;
   bottom: 4%;
   width: 0%;
-  height: 0vh;
+  height: 0%;
   opacity: 0;
 }
 
@@ -361,7 +361,7 @@ main {
   left: 4.5%;
   bottom: 4%;
   width: 90%;
-  height: 9vh;
+  height: 9%;
   opacity: 1;
   transition: all 1s;
 }
@@ -431,7 +431,7 @@ main {
 
 .chatDivBefore {
   width: 0%;
-  height: 0vh;
+  height: 0%;
   overflow: auto;
   padding: 0% 3%;
   display: block;
@@ -457,11 +457,11 @@ main {
 .chatDiv {
   position: relative;
   width: 100%;
-  height: 10vh;
+  height: 10%;
 }
 
 .chatDiv:nth-child(5) {
-  height: 15vh;
+  height: 15%;
 }
 
 .left {
