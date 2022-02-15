@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./../../../Assets/logo/favicon.ico" type="image/x-icon">
+    <title>Prasanna venkatesh</title>
+    <link rel="stylesheet" href="./../css/development.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preLoader">
+        <div id="loader">
+            <h1>PV<span class="dot">.</span></h1>
+        </div>
+    </div>
+
+    <header>
+        <div id="pageName">DEVELOPMENT</div>
+        <a id="profile" href="./../../home/html/home.html">
+            <img id="profileImg" src="./../../../Assets/img/3D_profile_image.png" alt="profile" width="100%">
+        </a>
+        <a href="https://github.com/Prasanna-dot" target="blank" id="social">GITHUB</a>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <section id="sec1">
+            <div id="sec1Div">
+                <div id="birdsDiv"></div>
+            </div>
+        </section> 
+    </main>
+
+    <!-- Preloader function -->
+    <script>
+        const loader = document.getElementById("preLoader");
+        window.addEventListener("load", function () {
+            loader.classList.add("preloader");
+            setTimeout(function () {
+                loader.style.display = "none";
+            }, 2500);
+        });
+    </script>
+
+    <!-- link js file -->
+    <script src="./../js/development.js"></script>
+</body>
+
+</html>

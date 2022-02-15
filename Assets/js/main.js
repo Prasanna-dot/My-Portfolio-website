@@ -63,8 +63,7 @@ function startingChatting() {
   document.getElementById("form").classList.remove("beforeform");
   document.getElementById("chatDiv").classList.add("chatDivAfter");
   document.getElementById("chatDiv").classList.remove("chatDivBefore");
-  document.getElementById("startCharting").style.display = "none";
-  document.getElementById("startSpeaking").style.display = "none";
+  document.getElementById("buttons").style.display = "none";
 }
 
 function backOption() {
@@ -79,8 +78,7 @@ function backOption() {
   document.getElementById("contentDiv").classList.add("contentBefore");
   document.getElementById("contentDiv").classList.remove("contentAfter");
   setTimeout(function () {
-    document.getElementById("startCharting").style.display = "block";
-    document.getElementById("startSpeaking").style.display = "block";
+    document.getElementById("buttons").style.display = "flex";
   }, 900);
   document.getElementById("contentDiv").innerText="";
   recognition.stop();
