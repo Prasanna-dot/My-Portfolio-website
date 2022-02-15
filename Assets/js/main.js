@@ -76,10 +76,14 @@ function backOption() {
   document.getElementById("form").classList.add("beforeform");
   document.getElementById("chatDiv").classList.remove("chatDivAfter");
   document.getElementById("chatDiv").classList.add("chatDivBefore");
+  document.getElementById("contentDiv").classList.add("contentBefore");
+  document.getElementById("contentDiv").classList.remove("contentAfter");
   setTimeout(function () {
     document.getElementById("startCharting").style.display = "block";
     document.getElementById("startSpeaking").style.display = "block";
   }, 900);
+  document.getElementById("contentDiv").innerText="";
+  recognition.stop();
 }
 
 // array is for store replys in local storage
@@ -96,9 +100,11 @@ function chatsubmmit() {
 
   let len = storeValue.length;
 
-  if (len == 0 && textArea != "") {
+  if (textArea == "hi" && textArea != "") {
     chatreply.push(textArea);
-  } else if (storeValue[len - 1] != textArea && textArea != "") {
+  } else if (storeValue[len - 1] == "hi" && textArea != "") {
+    chatreply.push(textArea);
+  } else if (textArea == "thank you" && textArea != "") {
     chatreply.push(textArea);
   } else {
     alert("Please chat With PV");
@@ -149,6 +155,65 @@ function chatting() {
   }
 
   document.getElementById("chatDiv").innerHTML = right;
+}
+
+const talk = document.getElementById("startSpeaking");
+const content = document.getElementById("content");
+
+const speechreg = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new speechreg();
+
+
+recognition.onstart = function () {
+    readOutloud("hi");
+    document.getElementById("contentDiv").innerText="Say hi";
+};
+
+talk.onclick = function () {
+  recognition.start();
+  document.getElementById("startCharting").style.display = "none";
+  document.getElementById("contentDiv").classList.remove("contentBefore");
+  document.getElementById("contentDiv").classList.add("contentAfter");
+};
+
+recognition.continuous = true;
+
+
+let array = [];
+
+recognition.onresult = function (event) {
+  const current = event.resultIndex;
+  let transcript = event.results[current][0].transcript;
+  transcript = transcript.toLowerCase();
+  content.textContent = transcript;
+
+  if (transcript.includes("hi")) {
+    readOutloud("my name is prasanna venkatesh call me pv");
+    document.getElementById("contentDiv").innerText="Say my name is your name";
+  }
+
+  let name = transcript.split("is")[1];
+
+  if (transcript.includes("my name is" + name) || transcript.includes("hi my name is" + name)) {
+    readOutloud(`Welcome ${name} thank you for coming`);
+    
+    setTimeout(function () {
+      window.location.href = "./../../pages/home/html/home.html";
+    }, 3000);
+  }
+}
+
+function readOutloud(message) {
+
+  const speech = new SpeechSynthesisUtterance();
+
+  speech.text = message;
+  speech.volume = 1;
+  speech.rate = 1;
+  speech.pitch = 1.5;
+
+  window.speechSynthesis.speak(speech);
 }
 
 chatting();

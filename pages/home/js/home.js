@@ -22,11 +22,11 @@ function transformPanel(mouseEvent) {
   mouseX = mouseEvent.pageX;
   mouseY = mouseEvent.pageY;
 
-  const centerX = myPanel.offsetLeft + myPanel.clientWidth / 2;
-  const centerY = myPanel.offsetTop + myPanel.clientHeight / 2;
+  const centerX = myPanel.offsetLeft + myPanel.clientWidth / 3;
+  const centerY = myPanel.offsetTop + myPanel.clientHeight / 3;
 
-  const percentX = (mouseX - centerX) / (myPanel.clientWidth / 2);
-  const percentY = -((mouseY - centerY) / (myPanel.clientHeight / 2));
+  const percentX = (mouseX - centerX) / (myPanel.clientWidth / 3);
+  const percentY = -((mouseY - centerY) / (myPanel.clientHeight / 3));
 
   subpanel.style.transform =
     "perspective(500px) rotateY(" +
