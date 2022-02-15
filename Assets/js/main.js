@@ -136,7 +136,7 @@ function chatting() {
     document.getElementById("textArea").placeholder = "Thank you";
     right = right + create;
 
-    create = `<div class="chatDivLeft"><div class="left">Welcome ${storeValues[1]} <a href="../pages/home/html/home.html">click here</a> to see my portfolio thank you</div></div>`;
+    create = `<div class="chatDivLeft"><div class="left">Welcome ${storeValues[1]} <a href="./pages/home/html/home.html">click here</a> to see my portfolio thank you</div></div>`;
     right = right + create;
   }
 
