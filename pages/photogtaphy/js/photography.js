@@ -44,12 +44,12 @@ function handleMouseLeave() {
   subpanel.style.transform = "perspective(400px) rotateY(0deg) rotateX(0deg)";
 }
 
-let birds = "";
+let photos = "";
 
 for (let img = 1; img < 46; img++) {
-  let create = `<div><img width="100%" src="./../../../Assets/img/photography/photography_${img}.jpg"></div>`;
+  let create = `<div><img width="100%" src="./../../../Assets/img/photography/photography_${img}-min.jpg"></div>`;
 
-  birds = birds + create;
+  photos = photos + create;
 
-  document.getElementById("birdsDiv").innerHTML = birds;
+  document.getElementById("birdsDiv").innerHTML = photos;
 }
