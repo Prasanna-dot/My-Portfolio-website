@@ -98,12 +98,12 @@ function chatsubmmit() {
 
   let len = storeValue.length;
 
-  if (textArea == "hi" && textArea != "") {
-    chatreply.push(textArea);
-  } else if (storeValue[len - 1] == "hi" && textArea != "") {
-    chatreply.push(textArea);
-  } else if (textArea == "thank you" && textArea != "") {
-    chatreply.push(textArea);
+  if (textArea.toLowerCase() == "hi" && textArea.toLowerCase() != "") {
+    chatreply.push(textArea.toLowerCase());
+  } else if (storeValue[len - 1] == "hi" && textArea.toLowerCase() != "") {
+    chatreply.push(textArea.toLowerCase());
+  } else if (textArea.toLowerCase() == "thank you" && textArea.toLowerCase() != "") {
+    chatreply.push(textArea.toLowerCase());
   } else {
     alert("Please chat With PV");
   }
@@ -148,7 +148,7 @@ function chatting() {
     right = right + create;
 
     setTimeout(function () {
-      window.location.href = "../pages/home/html/home.html";
+      window.location.href = "./pages/home/html/home.html";
     }, 1000);
   }
 
@@ -197,7 +197,7 @@ recognition.onresult = function (event) {
     readOutloud(`Welcome ${name} thank you for coming`);
     
     setTimeout(function () {
-      window.location.href = "../pages/home/html/home.html";
+      window.location.href = "./pages/home/html/home.html";
     }, 3000);
   }
 }
