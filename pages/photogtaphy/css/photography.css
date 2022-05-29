@@ -166,9 +166,13 @@ section {
 
 #birdsDiv div{
   display: inline-block;
-  padding: 0.1% 0.25%;
+  padding: 0.25% 0.25%;
   width: calc(100% / 4);
   height: auto;
+}
+
+#birdsDiv div:hover{
+  opacity: 0.7;
 }
 
 #preview{

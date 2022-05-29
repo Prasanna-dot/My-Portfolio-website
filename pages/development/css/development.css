@@ -17,6 +17,7 @@ body::-webkit-scrollbar{
 
 #preLoader {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -84,13 +85,13 @@ body::-webkit-scrollbar{
 
 main {
   width: 100%;
-  height: 100%;
+  margin-top: 17vh;
 }
 
 header {
   width: 100%;
   height: 17vh;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 10;
   background: linear-gradient(
@@ -121,12 +122,8 @@ header {
 }
 
 section {
-  position: relative;
   width: 100%;
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #profile {
@@ -141,23 +138,10 @@ section {
   cursor: pointer;
 }
 
-#sec1Div {
-  width: 100%;
-  height: 83vh;
+.sec1Div {
+  padding: 2% 1%;
+  width: 50%;
+  height: 50vh;
   cursor: pointer;
   transition: width 1s;
-}
-
-#birdsDiv {
-  width: 100%;
-  height: 83vh;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-#birdsDiv div{
-  display: inline-block;
-  padding: 0.1% 0.25%;
-  width: calc(100%/4);
-  height: auto;
 }
